@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --font-ubuntu: "Ubuntu", "sans-serif";
+  --text-bold: 700;
+  --text-medium: 500;
+  --text-regular: 400;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1440px;
+  --color-marine: hsl(213, 96%, 18%);
+  --color-purplish: hsl(243, 100%, 62%);
+  --color-pastel: hsl(228, 100%, 84%);
+  --color-light: hsl(206, 94%, 87%);
+  --color-strawberry: hsl(354, 84%, 57%);
+  --color-cool-gray: hsl(231, 11%, 63%);
+  --color-light-gray: hsl(229, 24%, 87%);
+  --color-magnolia: hsl(217, 100%, 97%);
+  --color-alabaster: hsl(231, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+  --text-paragraph: 16px;
+  /* ... */
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url(/Ubuntu-Bold.ttf) format("truetype"),
+    url(/Ubuntu-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url(/Ubuntu-Medium.ttf) format("truetype"),
+    url(/Ubuntu-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src:
+    url(/Ubuntu-Regular.ttf) format("truetype"),
+    url(/Ubuntu-Regular.ttf) format("truetype");
+}
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-ubuntu);
+    background-color: var(--color-magnolia);
+  }
+  p {
+    font-size: var(--text-paragraph);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-marine);
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-marine);
+  }
+}
+
+/* .aside {
+  background-image: url("/public/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .aside {
+    background-image: url("/public/bg-sidebar-desktop.svg");
+  }
+} */
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  transform: translateY(0.3rem);
+}
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+.toggle-switch .switch {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--color-marine);
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.2s ease;
+}
+.toggle-switch .switch::before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 1px;
+  width: 18px;
+  height: 90%;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.toggle-switch input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(18px);
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--color-cool-gray);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-checkbox img {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: rgb(79, 79, 243);
+  border-color: rgb(79, 79, 243);
+}
+
+input[type="checkbox"]:checked + .custom-checkbox img {
+  display: block;
+}
