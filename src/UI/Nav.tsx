@@ -10,11 +10,7 @@ const Nav = () => {
     >
       <img
         className={isTablet ? "h-full" : "w-full"}
-        src={
-          isTablet
-            ? "/public/bg-sidebar-desktop.svg"
-            : "/public/bg-sidebar-mobile.svg"
-        }
+        src={isTablet ? "/bg-sidebar-desktop.svg" : "/bg-sidebar-mobile.svg"}
         alt=""
       />
       <div

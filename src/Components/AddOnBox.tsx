@@ -23,7 +23,7 @@ const AddOnBox = ({ item, onSelect }: AddOnBoxProps) => {
           htmlFor={`checkbox-${item.id}`}
           className="custom-checkbox  p-1 rounded-lg w-5 h-5 flex items-center justify-center"
         >
-          <img src="/public/icon-checkmark.svg" alt="" className="hidden" />
+          <img src="/icon-checkmark.svg" alt="" className="hidden" />
         </label>
       </div>
       <div>
