@@ -6,12 +6,10 @@ import { useAppContext } from "../Contexts/AppContext";
 import Footer from "../UI/Footer";
 import type { Plan } from "../Contexts/AppContext";
 import Button from "../Components/Button";
-import { useMediaQuery } from "react-responsive";
 
 const Plan = () => {
   const { plans, setPlans } = useAppContext();
   const navigate = useNavigate();
-  const isTablet = useMediaQuery({ minWidth: 1024 });
 
   function handleSelectPlan(planId: number) {
     setPlans((prev) =>
