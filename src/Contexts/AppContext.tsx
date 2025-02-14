@@ -53,7 +53,7 @@ const AppProvider = ({ children }: ProviderProps) => {
       name: "Arcade",
       priceMonthly: 9,
       priceYearly: 90,
-      svg: "/public/icon-arcade.svg",
+      svg: "/icon-arcade.svg",
       chosen: false,
     },
     {
@@ -61,7 +61,7 @@ const AppProvider = ({ children }: ProviderProps) => {
       name: "Advanced",
       priceMonthly: 12,
       priceYearly: 120,
-      svg: "/public/icon-advanced.svg",
+      svg: "/icon-advanced.svg",
       chosen: false,
     },
     {
@@ -69,7 +69,7 @@ const AppProvider = ({ children }: ProviderProps) => {
       name: "Pro",
       priceMonthly: 15,
       priceYearly: 150,
-      svg: "/public/icon-pro.svg",
+      svg: "/icon-pro.svg",
       chosen: false,
     },
   ]);
