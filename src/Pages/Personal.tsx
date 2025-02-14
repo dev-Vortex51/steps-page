@@ -41,7 +41,7 @@ const Personal = () => {
             type="text"
             placeholder="e.g. Stephen King"
             id="name"
-            error={errors.name}
+            error={errors?.name}
             register={register}
             validation={{
               required: "This field is required",
@@ -52,7 +52,7 @@ const Personal = () => {
             type="email"
             placeholder="e.g. stephenking@lorem.com"
             id="email"
-            error={errors.email}
+            error={errors?.email}
             register={register}
             validation={{
               required: "This field is required",
@@ -67,7 +67,7 @@ const Personal = () => {
             type="tel"
             placeholder="e.g. +1 234 567 890"
             id="phone"
-            error={errors.phone}
+            error={errors?.phone}
             register={register}
             validation={{
               required: "This field is required",
